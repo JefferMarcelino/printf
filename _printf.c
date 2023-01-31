@@ -29,13 +29,14 @@ int _printf(const char *format, ...)
 			if (func_print)
 			{
 				length += func_print(args);
-				i++;
+				/* i++; */
 			}
 			else
 			{
 				write(1, &(format[i]), 1);
 				length++;
 			}
+			i++;
 		}
 		else
 		{
