@@ -5,6 +5,7 @@
 
 int _printf(const char *format, ...);
 int print_char(va_list arg);
+int print_percetange(va_list arg);
 int print_string(va_list arg);
 
 /**
