@@ -54,7 +54,7 @@ int print_string(va_list arg)
 	char *s = va_arg(arg, char *);
 
 	if (!s)
-		s = "(null)";
+		s = "(nil)";
 
 	for (i = 0; s[i] != 0; i++)
 		write(1, &(s[i]), 1);

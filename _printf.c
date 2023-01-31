@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i] == '%' && format[i + 1] == 0)
+			if (format[i + 1] == 0)
 				return (-1);
 
 			if (format[i + 1] == ' ')
