@@ -28,20 +28,16 @@ int print_char(va_list arg)
  *
  * @arg: the argument list
  *
- * Return: if success 1, otherwise -1
+ * Return: always 1
  */
 
-int print_percetange(va_list arg)
+int print_percetange(__attribute__((unused))va_list arg)
 {
 	char c = '%';
 
-	if (c && arg)
-	{
-		write(1, &c, 1);
-		return (1);
-	}
+	write(1, &c, 1);
 
-	return (-1);
+	return (1);
 }
 
 /**
