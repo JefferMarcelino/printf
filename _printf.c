@@ -8,7 +8,6 @@
  *
  * Return: the length of the string
  */
-
 int _printf(const char *format, ...)
 {
 	int i, j, length = 0;
@@ -24,7 +23,6 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(args, format);
-
 	for (i = 0; format && format[i] != 0; i++)
 	{
 		if (format[i] == '%')
@@ -49,7 +47,6 @@ int _printf(const char *format, ...)
 			length++;
 		}
 	}
-
 	va_end(args);
 
 	return (length);
