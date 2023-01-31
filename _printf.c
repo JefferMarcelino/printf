@@ -16,8 +16,12 @@ int _printf(const char *format, ...)
 	print_options ops[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"%", print_percetange}
+		{"%", print_percetange},
+		{NULL, NULL}
 	};
+
+	if (format == 0)
+		return (-1);
 
 	va_start(args, format);
 
