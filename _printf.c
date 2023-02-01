@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == 0)
 				return (-1);
+
 			if (format[i + 1] == ' ')
 			{
 				i++;
@@ -39,7 +40,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				write(1, &(format[i]), 1);
+				write(1, &(format[i + 2]), 1);
 				length++;
 			}
 		}
