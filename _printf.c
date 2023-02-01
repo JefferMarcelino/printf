@@ -26,8 +26,14 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 0)
 				return (-1);
 
-			if (format[i + 1] == ' ')
-				i++;
+			for (; format[i + 1] == ' '; i++)
+			{
+				if (format[i] != ' ')
+				{
+					write(1, &(format[i + 1]), 1);
+					length++;
+				}
+			}
 
 			func_print = get_print_func(&(format[i + 1]));
 
@@ -38,7 +44,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				write(1, &(format[i]), 1);
+				write(1, &(format[i + 2]), 1);
 				length++;
 			}
 		}
